@@ -7,19 +7,19 @@ class Solution {
     static void countApplesAndOranges(int s, int t, int a, int b, int[] apples, int[] oranges) {
         // Complete this function
         int apct=0, orct=0,tes;
-            for (int i = 0; i < apples.Length; i++)
-            {
-                tes = a + apples[i];
-                if (tes>=s && tes <= t)
-                    apct++; 
-            }   
-            for (int i = 0; i < oranges.Length; i++)
-            {
-                tes = b + oranges[i];
-                if (tes >= s && tes <= t)
-                    orct++;
-            }
-            Console.WriteLine(apct+"\n"+orct); 
+        for (int i = 0; i < apples.Length; i++)
+        {
+            tes = a + apples[i];
+            if (tes>=s && tes <= t)
+                apct++; 
+        }   
+        for (int i = 0; i < oranges.Length; i++)
+        {
+            tes = b + oranges[i];
+            if (tes >= s && tes <= t)
+                orct++;
+        }
+        Console.WriteLine(apct+"\n"+orct); 
     }
 
     static void Main(String[] args) {

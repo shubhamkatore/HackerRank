@@ -7,20 +7,20 @@ class Solution {
     static string caesarCipher(string s, int k) {
         // Complete this function
         string op = "";
-            char[] ret = s.ToCharArray();
-            for (int i = 0; i < ret.Length; i++)
+        char[] ret = s.ToCharArray();
+        for (int i = 0; i < ret.Length; i++)
+        {
+            if (!char.IsLetter(ret[i]))
             {
-                if (!char.IsLetter(ret[i]))
-                {
-                    op += ret[i];
-                }
-                else
-                {
-                    char d = char.IsUpper(ret[i]) ? 'A' : 'a';
-                    op+=(char)((((ret[i] + k) - d) % 26) + d);
-                }
+                op += ret[i];
             }
-            return op;
+            else
+            {
+                char d = char.IsUpper(ret[i]) ? 'A' : 'a';
+                op+=(char)((((ret[i] + k) - d) % 26) + d);
+            }
+        }
+        return op;
     }
 
     static void Main(String[] args) {

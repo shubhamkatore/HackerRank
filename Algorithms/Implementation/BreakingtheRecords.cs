@@ -6,22 +6,22 @@ class Solution {
 
     static int[] breakingRecords(int[] score) {
         int high, low;
-            high=low= score[0];
-            int[] res = new int[2] { 0,0};
-            for (int i = 1; i < score.Length; i++)
+        high=low= score[0];
+        int[] res = new int[2] { 0,0};
+        for (int i = 1; i < score.Length; i++)
+        {
+            if (score[i]>high)
             {
-                if (score[i]>high)
-                {
-                    res[0]++;
-                    high = score[i];
-                }
-                else if (low> score[i])
-                {
-                    res[1]++;
-                    low = score[i];
-                }
+                res[0]++;
+                high = score[i];
             }
-            return res;
+            else if (low> score[i])
+            {
+                res[1]++;
+                low = score[i];
+            }
+        }
+        return res;
     }
 
     static void Main(String[] args) {
